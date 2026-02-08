@@ -19,10 +19,21 @@ class Circle:
     def get_name(self):
         return "Circle"
 
+class Triangle:
+    def __init__(self, base, height):
+        self.__base = base
+        self.__height = height
+
+    def get_area(self):
+        return (self.__base * self.__height) / 2
+    
+    def get_name(self):
+        return "Triangle"
+
 
 
 test_rectangle = Rectangle(5, 3)
 test_circle = Circle(12)
+triangle = Triangle(3, 12)
 
-# print(f"DEBUG: Get area = {test_circle.get_area()}")
-print(f"DEBUG: Get name = {test_circle.get_name()}")
+print(f"DEBUG: Triangle name = {triangle.get_name()}")
