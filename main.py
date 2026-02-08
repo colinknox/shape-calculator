@@ -14,7 +14,7 @@ class Circle:
         self.__radius = radius
 
     def get_area(self):
-        return 3.14159 * (self.__radius * self.__radius)
+        return 3.14159 * (self.__radius ** 2)
     
     def get_name(self):
         return "Circle"
@@ -30,10 +30,11 @@ class Triangle:
     def get_name(self):
         return "Triangle"
 
+def calculate_total_area(shapes):
+    total_area = 0
+    
+    for current_shape in shapes:
+        print(f"{current_shape.get_name()}: {current_shape.get_area()} square units")
+        total_area += current_shape.get_area()
 
-
-test_rectangle = Rectangle(5, 3)
-test_circle = Circle(12)
-triangle = Triangle(3, 12)
-
-print(f"DEBUG: Triangle name = {triangle.get_name()}")
+    return total_area
